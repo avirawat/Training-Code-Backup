@@ -1,0 +1,172 @@
+<!-- using template driven forms with template ref varable
+add ngModel to the tag
+add template ref variable  and assign ngModel to it like #firstname=ngModel
+only then you can access the properties like dirty,touched, valid,pristine  -->
+<div class="container">
+  <form #registerForm=ngForm (ngSubmit)=onRegister(registerForm)>
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input type="text"
+      name="firstname"
+      id="firstname"
+      class="form-control"
+      required minlength=5 maxlength=10
+      ngModel
+      #firstname="ngModel"   >
+    </div>
+      <div *ngIf="!firstname.valid &&(firstname.touched||firstname.dirty)" >
+     <div *ngIf="firstname.errors.required" class="errorMsg">
+       <small id="helpId" class="text-muted">Firstname is required</small>
+     </div>
+      <div *ngIf="firstname.errors.minlength" class="errorMsg">
+        <small id="helpId" class="text-muted">Minlength should be greater than 5</small>
+       </div>
+       <div *ngIf="firstname.errors.maxlength" class="errorMsg">
+        <small id="helpId" class="text-muted">Maxlength should be lessthan 10</small>
+       </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">LastName</label>
+      <input type="text" name="lastname" id="lastname" class="form-control" ngModel>
+      <small id="helpId" class="text-muted">Help text</small>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" #usermail="ngModel" required email class="form-control" name="usermail" id="email" ngModel >
+      <div *ngIf="!usermail.valid &&(usermail.touched||usermail.dirty)" >
+       <div *ngIf="usermail.errors.required" class="errorMsg">
+         <small id="helpId" class="text-muted">Email is required</small>
+       </div>
+       <div *ngIf="usermail.errors.email" class="errorMsg">
+           <small id="helpId" class="text-muted">Not a valid email</small>
+         </div>
+      </div>
+    </div>
+
+    <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="gender" id="gender" value="male" ngModel>
+          Male
+        </label>
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="gender" id="gender" value="famale" ngModel>
+          Female
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" name="acceptTerms" id="acceptTerms" value="false" ngModel>
+          I Accept term And Condition
+        </label>
+    </div>
+    <div ngModelGroup="address">
+    <div class="form-group">
+      <label for="city">City</label>
+      <select class="form-control" name="city" id="city"  ngModel>
+        <option *ngFor="let city of cities" [ngValue]="city">{{city}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <select class="form-control" name="state" id="state"  ngModel>
+        <option *ngFor="let state of states" [ngValue]="state">{{state}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="pincode">Pincode</label>
+     <input type="text" name="zipcode" id="pincode" ngModel>
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary" [disabled]='!registerForm.valid'>Register</button>
+    <!-- <div>
+      <button class="btn btn-success" (click)="setValues()">Set Default Values</button>
+    </div>
+    <div>
+      <button class="btn btn-success" (click)="setPartValues()">Set Part Values</button>
+    </div> -->
+  </form>
+
+</div>
+<!-- <div>
+  Value{{registerForm.value|json}}<br>
+  Value{{firstname.value}}<br>
+  Touched{{registerForm.touched}}<br>
+  Valid{{registerForm.valid}}<br>
+  submitted{{registerForm.submitted}}<br>
+
+</div> -->
+<div>
+  Dirty:{{firstname.dirty}}<br>
+  Touched:{{firstname.touched}}<br>
+  Valid:{{firstname.valid}}<br>
+  Submitted:{{firstname.submitted}}
+</div>
+<!-- using template driven forms with ngModel two  -->
+<!-- <div class="container">
+  <form #registerForm=ngForm (ngSubmit)=onRegister(registerForm)>
+    <div class="form-group">
+      <label for="firstname" >FirstName</label>
+      <input type="text" #firstname name="firstname" #firstname id="firstname" class="form-control" [(ngModel)]="user.firstname" >
+      <small id="helpId" class="text-muted">Help text</small>
+    </div>
+    <div class="form-group">
+      <label for="lastName">LastName</label>
+      <input type="text" name="lastname" id="lastname" #lastname class="form-control" [(ngModel)]="user.lastname">
+      <small id="helpId" class="text-muted">Help text</small>
+    </div>
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" class="form-control" #email name="email" id="email" [(ngModel)]="user.email">
+      <small id="emailHelpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="gender" #gender id="gender" value="male" [(ngModel)]="user.gender">
+          Male
+        </label>
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="gender" #gender id="gender" value="famale" [(ngModel)]="user.gender">
+          Female
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input" #checkbox name="acceptTerms" id="acceptTerms" value="false">
+          I Accept term And Condition
+        </label>
+    </div>
+    <div Group="address">
+    <div class="form-group">
+      <label for="city">City</label>
+      <select class="form-control" name="city" id="city" #city [(ngModel)]="user.address.city">
+        <option *ngFor="let city of cities" [ngValue]="city">{{city}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <select class="form-control" name="state" id="state" #state [(ngModel)]="user.address.state">
+        <option *ngFor="let state of states" [ngValue]="state">{{state}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="zipcode">Pincode</label>
+     <input type="text" name="zipcode" id="zipcode" #pincode [(ngModel)]="user.address.zipcode">
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+    <div>
+      <button class="btn btn-success" (click)="setValues()">Set Default Values</button>
+    </div>
+    <div>
+      <button class="btn btn-success" (click)="setPartValues()">Set Part Values</button>
+    </div>
+  </form>
+
+</div>
+<div>
+  Dirty:{{firstname.dirty}}
+  Touched:{{firstname.touched}}
+  Valid:{{firstname.valid}}
+  Submitted:{{firstname.submitted}}
+</div> -->

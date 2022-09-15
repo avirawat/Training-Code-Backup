@@ -1,0 +1,16 @@
+<div class="comtainer apply m-5 p-5 w-50">
+<form #loginForm=ngForm (ngSubmit)=onLogin(loginForm)>
+
+    <div class="form-group" >
+      <label for="username">Username</label>
+      <input type="text" name="username" id="border" class="form-control w-50" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control w-50" name="password" id="border"  ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+</div>

@@ -1,0 +1,53 @@
+<h3>Inbuilt Pipes</h3>
+{{username|uppercase}}<br>
+{{employee.name|lowercase}}<br>
+{{employee.salary|currency}}<br>
+{{employee.salary|currency:'Rs'}}<br>
+{{employee.bonus|number:'1.0-2'}}
+<br>
+<br>
+<h3>Date ANd Time</h3>
+{{employee.birthday|date:'short'}}<br/><hr>
+
+{{employee.birthday|date:'shortTime'}}<br/><hr>
+
+{{employee.birthday|date:'shortDate'}}<br/><hr>
+
+{{employee.birthday|date:'mediumDate'}}<br/><hr>
+{{employee.birthday|date:'fullDate'|uppercase}}<br/>
+{{employee|json}}<br/>
+
+
+
+<h3 *ngFor="let course of courses">
+  {{course.courseName|uppercase}}<br>
+  {{course.courseType|lowercase}}<br>
+  {{course.cost|currency:'Rs'}}<br><hr>
+
+</h3>
+
+<h3 [ngStyle]="{'background-color':'aqua','text-decoration':'underline'}">Custom Pipes</h3>
+<h3>
+  {{username|title:'female'}}<br>
+  {{username|title}}<br>
+  {{"Avi"|title:'male'}}<br><hr>
+  {{joinDate|time:'t'}}<br>
+  {{joinDate|time:'d':'shortTime'}}<br><hr>
+
+</h3>
+
+<h3>
+  {{username|reverse}}
+</h3>
+
+<h3>Filter Pipe</h3>
+Enter choice for course Name<input type="text" [(ngModel)]=choice><br>
+<div *ngFor="let course of courses|filter:'courseName':choice">
+  <!-- <h3 *ngIf="course.courseType==choice"> -->
+    <strong>{{course.courseName|uppercase}}</strong><br>
+    <strong>{{course.cost|currency}}</strong><hr>
+
+  <!-- </h3> -->
+</div>
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Literals</title>
+</head>
+<body>
+    <script>
+        var student={
+            name:'Ram',
+            age:30,
+            hobbies:['sports','music','dance'],
+            address:{
+                city:'Banglore',
+                state:'kar'
+            }
+        }
+        document.write(student.name);
+        student.mobile=993063838093;
+        for(var i in student) {
+            document.write(student[i]+"<br/>")
+        }
+    </script>
+</body>
+</html>

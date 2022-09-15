@@ -1,0 +1,13 @@
+.one{
+  background-color: yellow;
+  letter-spacing: 2px;
+}
+.two{
+  color:indigo;
+  text-transform: uppercase;
+}
+.three{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+}

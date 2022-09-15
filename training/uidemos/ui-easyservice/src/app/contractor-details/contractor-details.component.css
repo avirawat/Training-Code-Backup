@@ -1,0 +1,9 @@
+.contract-container {
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contract-card {
+    background-color: transparent;
+}

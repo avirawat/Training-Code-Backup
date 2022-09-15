@@ -1,0 +1,23 @@
+<!-- using String -->
+<h3 [ngClass]="'one'">Using Ng Class with String</h3>
+<h3 [ngClass]="'one two'">Using Ng Class with String</h3>
+
+<!-- using Array-->
+<h3 [ngClass]="['one','two','three']">Using NgClass with String Array</h3>
+
+<!-- using Object with count-->
+<h3 [ngClass]="{'one':false,'two':true,'three':true}">Using NgClass with String Array</h3>
+
+<!-- using ngStyle-->
+<div [ngStyle]="{'color':'red','text-transform':'uppercase'}">Using NGStyle Directive</div>
+
+<div *ngFor = 'let course of courses' [ngClass]="'one'">
+    <h3 [ngStyle]="{'color':'purple','text-transform':'uppercase'}">{{course.courseName}}</h3>
+    <h3 [ngStyle]="{'color':'green','text-transform':'uppercase'}">{{course.courseType}}</h3>
+    <h3 [ngStyle]="{'color':'blue','text-transform':'uppercase'}">{{course.cost}}</h3>
+
+</div>
+
+
+
+

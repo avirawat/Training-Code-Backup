@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script>
+        check=false;
+        var userArray=["avinash","ayan","teja"];
+        var name=prompt("Enter username")
+        for(var user of userArray) {
+           if(user===name) 
+           check=true;
+        }
+        if(check)
+            document.write("user already avaialable");
+        else
+            document.write("user not avialable");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

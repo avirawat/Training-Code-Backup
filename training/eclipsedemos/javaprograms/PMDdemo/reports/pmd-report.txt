@@ -1,0 +1,30 @@
+src/pmdTest/Demo.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/pmdTest/Demo.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/pmdTest/Demo.java:7:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/pmdTest/Demo.java:7:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/pmdTest/Demo.java:7:	ShortClassName:	ShortClassName: Avoid short class names like Demo
+src/pmdTest/Demo.java:7:	ShortClassName:	ShortClassName: Avoid short class names like Demo
+src/pmdTest/Demo.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/pmdTest/Demo.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/pmdTest/Demo.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'a' is not assigned and could be declared final
+src/pmdTest/Demo.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'a' is not assigned and could be declared final
+src/pmdTest/Demo.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'b' is not assigned and could be declared final
+src/pmdTest/Demo.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'b' is not assigned and could be declared final
+src/pmdTest/Demo.java:8:	ShortVariable:	ShortVariable: Avoid variables with short names like a
+src/pmdTest/Demo.java:8:	ShortVariable:	ShortVariable: Avoid variables with short names like a
+src/pmdTest/Demo.java:8:	ShortVariable:	ShortVariable: Avoid variables with short names like b
+src/pmdTest/Demo.java:8:	ShortVariable:	ShortVariable: Avoid variables with short names like b
+src/pmdTest/Demo.java:13:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/pmdTest/Demo.java:13:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/pmdTest/Demo.java:13:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/pmdTest/Demo.java:13:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/pmdTest/Demo.java:15:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'd' could be declared final
+src/pmdTest/Demo.java:15:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'd' could be declared final
+src/pmdTest/Demo.java:15:	ShortVariable:	ShortVariable: Avoid variables with short names like d
+src/pmdTest/Demo.java:15:	ShortVariable:	ShortVariable: Avoid variables with short names like d
+src/pmdTest/Demo.java:16:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/pmdTest/Demo.java:16:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'x' could be declared final
+src/pmdTest/Demo.java:16:	ShortVariable:	ShortVariable: Avoid variables with short names like x
+src/pmdTest/Demo.java:16:	ShortVariable:	ShortVariable: Avoid variables with short names like x
+src/pmdTest/Demo.java:17:	SystemPrintln:	SystemPrintln: System.out.println is used
+src/pmdTest/Demo.java:17:	SystemPrintln:	SystemPrintln: System.out.println is used

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-4" *ngFor="let league of leagues" (click)="onClick(league)">
+            <div class="card">
+                <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+                <div class="card-body">
+                    <h4 class="card-title">{{league.name}}</h4>
+                    <p class="card-text">{{league.sports.name}}</p>
+                    <p class="card-text">{{league.country}}</p>
+                    <p class="card-text">{{league.board.boardName}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

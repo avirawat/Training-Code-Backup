@@ -1,0 +1,42 @@
+<h3>Interpolation</h3>
+<h3>Welcome {{employee.name}}<br>
+salary is {{employee.salary}}</h3>
+
+<h3>Property-Binding</h3>
+<img src='{{imageName}}' height='300px' />
+<img src='{{imageName}}' height='250px' />
+<img src='{{imageName}}' height='200px' />
+<img [src]='imageName' height='150px' />
+<img bind-src='imageName' height='100px' />
+
+
+<button [disabled]='buttonStatus'>Click here to install</button>
+
+<h3>Event  Binding - from view to source</h3>
+{{message}}
+<button (click)='changeMessage()'>SHow Message</button><br>
+<!-- #username is called template reference variable. Can be usend
+inly in template -->
+Enter username<input type="text" #username>
+<button (click)='greet(username.value)'>Greet User</button>
+
+<h3>Class-Binding - from view to source</h3>
+<h4 [class]='myClass'>Applying class binding</h4>
+<h4 [class.checker]='applyClass'>Applying class binding using boolean value</h4>
+<h4 [class.checker]='!applyClass'>Applying class binding using boolean value</h4>
+
+<h4 [class]='!applyClass?"header":"para"'>Applying class binding</h4>
+
+<h3> Style Binding</h3>
+<h4 [style.color]='mycolor'>Applying style binding using properties mycolor in ts file</h4>
+<h4 [style.color]='!applyColor?"blue":"green"'>Applying style binding using properties mycolor in ts file</h4>
+
+
+<h3> Two way data-binding using ngModel</h3>
+<input type="text" [(ngModel)]="uname">{{uname}}
+
+<!-- <button (click)='show()'>show User</button> -->
+
+
+
+

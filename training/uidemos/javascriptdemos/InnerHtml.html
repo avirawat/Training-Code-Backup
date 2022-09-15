@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function sayHello() {
+            //alert('jebckhed')
+           name= document.getElementById("username").value;
+           alert("Have a great dau "+name);
+            
+            document.getElementById("mydiv").innerHTML="Have a great day "+name;
+        }
+       
+    </script>
+</head>
+<body >
+   Enter Name <input type="text" id="username">
+   <input type="button" onclick="sayHello()" value="Show ">
+  <div id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
+    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.api.CampaignController"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.entity.Resource"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.dozer.DozerBeanMapper"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.vo.CampaignVO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.entity.Project"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.entity.Availability"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.vo.AvailabilityVO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.TypeMismatchException"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.exception.IDNotFoundException"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.entity.Campaign"/>
+    <fullyQualifiedTypeName name="org.arm.resource.mngt.vo.ResourceVO"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+</qualifiedTypeNameHistroy>

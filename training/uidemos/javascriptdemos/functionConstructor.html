@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-defined Function Constructor</title>
+</head>
+<body>
+    <script>
+        var Book=function(title,author){
+            this.title=title;
+            this.author=author;
+            this.print=function() {
+                document.write("Title "+this.title+"<br/>");
+                document.write("Author "+this.author+"<br/>");
+            }
+        }
+        var book=new Book("java","Avi");
+        document.write("Title "+book.title+"<br/>");
+        document.write("Author "+book.author+"<br/>");
+        //document.write(book.author);
+        book.print();
+        book.isbnNumber='BVAC123';
+        document.write("ISBN number"+book.isbnNumber+"<br/>");
+        //book.show();
+        Book.prototype.price=500;
+        Book.prototype.getDiscount=function(amount) {
+            document.write("discounted Price "+(this.price-amount));
+        }
+        book.getDiscount(100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 mt-4" *ngFor="let team of teams" (click)="onClick(team)">
+            <div class="card">
+                <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+                <div class="card-body">
+                    <h4 class="card-title">{{team.teamName}}</h4>
+                    <p class="card-text" [ngStyle]="{'color':'red'}"><strong>{{team.owner}}</strong></p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Object</title>
+</head>
+<body>
+    <script>
+        var studentList= [
+            {
+                name:"Ram",
+                age:30,
+                hobbies:['sports','music'],
+                address:{
+                    city:'Banglore',
+                    state:'kar'
+                }
+            },
+            {
+                name:'Tom',age:26
+            },
+            {
+                name:"priya",city:'Banglore'
+            }
+        ];
+        for(var i in studentList) {
+            var student=studentList[i];
+            for(var i in student) {
+                var stud=student[i];
+                document.write(stud+" <br/");
+            }
+        }
+    </script>
+</body>
+</html>

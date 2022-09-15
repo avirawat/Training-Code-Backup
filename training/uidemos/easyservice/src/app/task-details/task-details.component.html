@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="card border-dark" *ngIf="service">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Service Name : {{service.taskName}}</h5>
+                <p class="card-text">Organiser Name : {{service.organiser}}</p>
+                <p class="card-text">Service Duration : {{service.durationDays}}</p>
+                <p class="card-text">Service Period : {{service.tstartDate}} to {{service.tendDate}}</p>
+                <p class="card-text">Status : {{service.tstatus}}</p>
+                <p class="card-text">Priority :{{service.tpriority}}</p>
+            </div>
+            <div class="btn btn-info">
+                Check Maintenance
+            </div>
+        </div>
+    </div>
+</div>

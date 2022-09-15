@@ -1,0 +1,13 @@
+.header{
+  background-color:aqua;
+  letter-spacing: 2px;
+}
+.checker{
+  color: red;
+  text-transform: uppercase;
+}
+.para{
+  background-color: blue;
+  color: white;
+  letter-spacing: 3px;
+}

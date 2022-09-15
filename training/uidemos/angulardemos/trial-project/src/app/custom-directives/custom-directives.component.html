@@ -1,0 +1,30 @@
+<h3 appBasicHighlight>Basic custom Attribute directive</h3>
+<h3 appRenderHighlight>Using Renderer</h3>
+<h3 appHostHighlight>Using Host Listener </h3>
+
+Enter color<input type="text" [(ngModel)]="mycolor">
+<h3 appHostbindHighlight [defaultColor]="'green'"
+                        [highlightColor]="mycolor"
+                        [textStyle]="'uppercase'"
+                        [highlightClass]="'header-style'"
+                        >
+  Using HostBinding a better approach
+</h3>
+
+<h3>Using Structural</h3>
+<input type="text" [(ngModel)]="username">
+<h3 *ngIf="username=='Priya'">
+  Welcome {{username}}
+</h3>
+ <!-- id username is not priya thi stemplate will be added -->
+<h3 *appNotif="username=='Priya'">
+  Great {{username}}
+</h3>
+<!-- //ngFor takes an array -->
+<h3 *ngFor="let i of numbers">
+ Hi {{i}}
+</h3>
+<!-- this directive  -->
+<h3 *appNumberloop="5">
+  Good Day
+</h3>

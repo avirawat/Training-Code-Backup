@@ -1,0 +1,14 @@
+.header{
+  background-color: aqua;
+}
+.checker{
+  letter-spacing: 2cm;
+  background-color: red;
+}
+.front{
+  background-color: royalblue;
+
+}
+.back{
+  background-color: lime;
+}

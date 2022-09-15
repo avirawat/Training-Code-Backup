@@ -1,0 +1,28 @@
+server:
+  port: 9000
+  
+eureka:
+  client:
+    service-url:
+     default-zone: http://localhost:8761/
+  # declarative configuration pf routes
+  #each  
+  #http://localhost:9000/mobile-service/mobiles/brand/samsung
+#http://localhost:9000/cart-service/cart/add-cart/1
+#http://localhost:9000/order-service/orders/view-order
+
+  
+spring:
+  application:
+   name: GATEWAY-SERVICE  cloud:    gateway:      routes:      - id: mobileService
+        uri: lb://MOB-SERVICE
+        predicates:        - Path=/mobile-service/**
+      - id: cartService
+        uri: lb://CART-SERVICE
+        predicates:        - Path=/cart-service/**
+        filters:        - AddRequestHeader=desc,cart-details
+        - AddResponseHeader=result,showingcart details
+        - AddResponseHeader=result,sending order details
+      - id: orderService/**
+        uri: lb://ORDER-SERVICE
+        predicates:        - Path=/order-service/**          

@@ -1,0 +1,3 @@
+export enum Status {
+  DEFINED,INPROGRESS,ONHOLD,COMPLETED
+}

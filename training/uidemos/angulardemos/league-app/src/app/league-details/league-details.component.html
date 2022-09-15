@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-4 mt-4">
+            <div class="card-column">
+                <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+                <div class="card-body" *ngIf='league'>
+                    <h4 class="card-title">{{league.name}}</h4>
+                    <p class="card-text">{{league.sports.name}}</p>
+                    <p class="card-text">{{league.board.boardName}}</p>
+                    <ul>
+                        <li *ngFor="let fixtures of league.fixtures" [ngStyle]="{'list-style-type':'none'}">
+                            <a [routerLink]="['/fixtures-details',fixtures.fixtureId]">
+                                <p><strong>{{fixtures.squads|uppercase}}</strong></p>
+                            </a>
+                            <p>{{fixtures.stadium}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

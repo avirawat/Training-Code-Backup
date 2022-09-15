@@ -1,0 +1,48 @@
+<h3 *ngIf="username=='Priya'">
+  welcome {{username}}
+</h3>
+<input type="text" [(ngModel)]=username>
+<h3 *ngIf="username=='Priya' else temp1">
+  welcome {{username}}
+</h3>
+
+<ng-template #temp1>
+  <h3>Wrong username</h3>
+</ng-template>
+
+Enter Name <input type="text" [(ngModel)]=uname>{{uname}}
+
+<h3 *ngIf="uname=='Joey' then temp2; else temp3"></h3>
+<ng-template #temp2>
+  <h3>Hi  {{uname}}</h3>
+</ng-template>
+
+<ng-template #temp3>
+  <h3>Invalid Name</h3>
+</ng-template>
+
+
+
+
+<h3> using ngIf and ngFor together</h3>
+<ul>
+  <li *ngFor='let vehicle of vehicles' [style.listStyleType]='mystyle'>
+    <h3 *ngIf='vehicle.includes("o") else temp4' [class]='cstyle'>
+      {{vehicle}}
+    </h3>
+    <ng-template #temp4>
+      <h3 [class]='hstyle'>{{vehicle}}</h3>
+    </ng-template>
+  </li>
+</ul>
+
+<h3> using  ngFor only</h3>
+<ul>
+  <li *ngFor='let vehicle of vehicles'>
+    <h3>
+      {{vehicle}}
+    </h3>
+  </li>
+</ul>
+
+

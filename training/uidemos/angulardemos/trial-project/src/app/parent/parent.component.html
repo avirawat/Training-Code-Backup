@@ -1,0 +1,28 @@
+<div [ngStyle]="{'background-color':'green'}">
+  <h3>Parent component</h3>
+  <h4> Values--</h4>
+    <h5 #header >{{parentMessOne}}</h5>
+    <h4 #newheader>Checking View Children</h4>
+  <h4 #newheader>{{childMessOne}}</h4>
+  <h4 #newheader>{{childMessTwo}}</h4>
+    <h5>{{parentMessTwo}}</h5>
+
+
+Enter Parent Name <input type="text" #parentname (keyup)=0/>
+Enter Parent Model Name <input type="text" [(ngModel)]='parentmodel'/>
+
+
+  <app-child [childOne]='parentMessOne'
+              [childTwo]='parentMessTwo'
+              [childmess]='parentname.value'
+              [childFour]='parentmodel'
+              (childEventOne)='childMessOne=$event'
+              (childEventTwo)='childMessTwo=$event'
+              >
+            </app-child>
+  <h4 >Values From Child</h4>
+  <h4 >{{childMessOne}}</h4>
+  <h4 #newheader>{{childMessTwo}}</h4>
+
+
+</div>

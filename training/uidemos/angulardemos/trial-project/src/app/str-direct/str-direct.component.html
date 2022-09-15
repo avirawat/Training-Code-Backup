@@ -1,0 +1,15 @@
+<ul>
+    <li *ngFor = 'let course of courses' >
+        <h3>{{course.courseName}}</h3>
+        <h3 *ngIf="course.courseType=='Web'" [class]='myclass'>
+          {{course.courseName}}*********{{course.cost}}
+        </h3>
+        <h3 *ngIf="course.courseType=='Frontend'" [class]='fnewclass'>
+          {{course.courseName}}*********{{course.cost}}
+        </h3>
+        <h3 *ngIf="course.courseType=='Backend' else temp1" [class]='bnewclass'>
+          {{course.courseName}}*********{{course.cost}}
+        </h3>
+    </li>
+</ul>
+

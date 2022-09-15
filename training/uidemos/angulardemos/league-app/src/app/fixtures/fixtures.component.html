@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-4" *ngFor="let fixture of fixtures" (click)="onClick(fixture)">
+            <div class="card">
+                <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+                <div class="card-body">
+                    <h4 class="card-title">{{fixture.squads}}</h4>
+                    <a [routerLink]="['/league-details',fixture.league.leagueId]">
+                        <p class="card-text">{{fixture.league.name}}</p>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

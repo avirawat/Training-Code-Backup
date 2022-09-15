@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row mt-4">
+        <div class="card">
+            <!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> -->
+            <div class="card-body" *ngIf="team">
+                <h4 class="card-title">{{team.teamName}}</h4>
+                <h5 class="card-text" [ngStyle]="{'color':'red'}"><strong>{{team.owner}}</strong></h5>
+                <ul>
+                    <li *ngFor="let player of team.players" [ngStyle]="{'list-style-type':'none'}">
+                        <a [routerLink]="['/player-details',player.playerId]">
+                            <p class="card-text">{{player.playerName}}</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

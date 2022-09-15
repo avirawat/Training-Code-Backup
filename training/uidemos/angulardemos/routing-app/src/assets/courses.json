@@ -1,0 +1,25 @@
+[{
+  "courseId":1,
+  "courseName":"Angular",
+  "courseType":"Frontend",
+  "cost":9000
+},
+{
+  "courseId":2,
+  "courseName":"Java",
+  "courseType":"Backend",
+  "cost":6000
+},
+{
+  "courseId":3,
+  "courseName":"React",
+  "courseType":"Frontend",
+  "cost":5000
+},
+{
+  "courseId":4,
+  "courseName":"HTML",
+  "courseType":"Frontend",
+  "cost":7000
+}
+]
